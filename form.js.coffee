@@ -5,7 +5,7 @@ class Form
   validate: (fields) ->
     _self = @
     @errors = []
-    _.each fields, (field) ->
+    for field in fields
       _val = field.el.val()
       if _val == ""
         _self.errors.push message: "<li>#{field.name} is required</li>"
@@ -14,5 +14,7 @@ class Form
           _self.errors.push message: "<li>#{field.name} should be a number</li>"
         else if field.pattern && !field.pattern.test(_val)
           _self.errors.push message: "<li>#{field.name} requires a specific format</li>"
+    
+     @errors
 
   Form
