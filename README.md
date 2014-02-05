@@ -1,11 +1,13 @@
-#Simple form validation class
+#Form validation
 
-####Initialize the object
+**Simple form validation class**
+
+##Initialize
 ```coffeescript
 form = new app.Form()
 ```
 
-####Call the ```validate``` function
+##Call the ```validate``` function
 
 ```coffeescript
 
@@ -17,7 +19,7 @@ form.validate(
 )
 ```
 
-####Check for errors
+##Check for errors
 
 ```coffeescript
 if create_transcript_form.errors.length > 0
