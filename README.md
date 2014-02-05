@@ -1,23 +1,23 @@
-Form Validation
-===============
+#Simple form validation class
 
-Simple form validation class
-
-
-Example usage
-
+####Initialize the object
 ```coffeescript
 form = new app.Form()
+```
+
+####Call the ```validate``` function
+
+```coffeescript
 
 form.validate(
   [
     {name: "Text", el: $("[name='comment[text]']")},
-    {name: "timestamp", el:[name='comment[timestamp]']"), pattern: /[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}/},
+    {name: "timestamp", el: $"([name='comment[timestamp]']"), pattern: /[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}/}
   ]
 )
 ```
 
-Check for errors
+####Check for errors
 
 ```coffeescript
 if create_transcript_form.errors.length > 0
