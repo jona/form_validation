@@ -1,4 +1,4 @@
-class app.Form
+class Form
   constructor: (settings) ->
     @errors = []
 
