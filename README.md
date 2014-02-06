@@ -13,8 +13,8 @@ form = new app.Form()
 
 form.validate(
   [
-    {name: "Text", el: $("[name='comment[text]']")},
-    {name: "timestamp", el: $"([name='comment[timestamp]']"), pattern: /[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}/}
+    {name: "Text", el: $("[name='text']")},
+    {name: "timestamp", el: $("[name='timestamp']"), pattern: /[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}/}
   ]
 )
 ```
