@@ -14,6 +14,8 @@ class Form
           _self.errors.push message: "<li>#{field.name} should be a number</li>"
         else if field.pattern && !field.pattern.test(_val)
           _self.errors.push message: "<li>#{field.name} requires a specific format</li>"
+        else if field.type && _val.toLowerCase().indexOf(".#{field.type}") == -1
+          _self.errors.push message: "<li>#{field.name} must be #{field.type} format</li>"
     
      @errors
 
