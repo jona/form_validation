@@ -4,7 +4,7 @@
 
 ##Initialize
 ```coffeescript
-form = new app.Form()
+form = new Form()
 ```
 
 ##Call the ```validate``` function
@@ -22,6 +22,6 @@ form.validate(
 ##Check for errors
 
 ```coffeescript
-if create_transcript_form.errors.length > 0
+if form.errors.length > 0
   #do something to catch errors
 ```
